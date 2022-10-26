@@ -12,4 +12,13 @@ form.addEventListener("submit", function () {
   const formData = new FormData(event.target);
   const values = Object.fromEntries(formData.entries());
   console.log(values);
+
+  const { title, subtitle, author, content } = values;
+
+  h1.textContent = title;
+  h2.textContent = subtitle;
+  small.textContent = author;
+  p.textContent = content;
+
+  main.append(h1, h2, small, p);
 });
