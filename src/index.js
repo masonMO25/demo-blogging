@@ -5,3 +5,11 @@ const h1 = document.createElement("h1");
 const h2 = document.createElement("h2");
 const small = document.createElement("small");
 const p = document.createElement("p");
+
+form.addEventListener("submit", function () {
+  event.preventDefault();
+
+  const formData = new FormData(event.target);
+  const values = Object.fromEntries(formData.entries());
+  console.log(values);
+});
